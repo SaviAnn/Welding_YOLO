@@ -70,7 +70,7 @@ if uploaded_file is not None:
                 ax.imshow(image)
                 num = 0
                 for box, cls, conf in zip(boxes, classes, confidences):
-                    if conf > 0.4:
+                    if conf > 0.2:
                         num += 1
                         x, y, w, h = box
                         x_min = (x - w / 2) * image.width
