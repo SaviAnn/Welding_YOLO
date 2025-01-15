@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from ultralytics import YOLO
 
 #  YOLO
-model_cus = YOLO('runs/detect/yolov8n_all_10epochs/weights/best.pt')
+model_cus = YOLO('best.pt')
 
 st.markdown("""
 <style>
