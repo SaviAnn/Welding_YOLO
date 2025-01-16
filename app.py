@@ -4,49 +4,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 from ultralytics import YOLO
 
+cola, colb = st.columns([1, 9])  
 
-#Logo image
-logo_path = "logo.jpg"
-st.markdown(
-    f"""
-    <style>
-        .header-logo {{
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            width: 100px;
-            z-index: 100;
-        }}
-    </style>
-    <img src="{logo_path}" class="header-logo">
-    """,
-    unsafe_allow_html=True
-)
+with cola:
+    st.image(logo, use_column_width=True)  # 
+with colb:
+    st.write("# YOLO Model: AI Welding Defects Detection PRO 👨‍🏭")  
 
-logo = Image.open("logo.jpg")
-
-# CSS for a position
-st.markdown(
-    """
-    <style>
-        .logo-container {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            z-index: 100;
-        }
-        .logo-container img {
-            width: 100px; 
-        }
-    </style>
-    <div class="logo-container">
-        <img src="data:image/jpeg;base64,{image}" alt="Logo">
-    </div>
-    """.format(
-        image=st.file_uploader_to_base64(logo)
-    ),
-    unsafe_allow_html=True,
-)
 #  YOLO
 model_cus = YOLO('best.pt')
 
@@ -68,7 +32,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.write("""# YOLO Model: AI Welding Defects Detection PRO 👨‍🏭""")
+#st.write("""# YOLO Model: AI Welding Defects Detection PRO 👨‍🏭""")
 
 
 uploaded_file = st.file_uploader("Select an image", type=["jpg", "jpeg", "png"])
