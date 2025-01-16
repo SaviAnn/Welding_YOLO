@@ -12,7 +12,7 @@ logo = Image.open("logo.jpg")
 with cola:
     st.write(" ")
     st.write(" ")
-    st.image(logo, width=110)  # 
+    st.image(logo, width=130)  # 
 with colb:
     st.write("# YOLO Model: AI Welding Defects Detection PRO 👨‍🏭")  
 
