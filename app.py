@@ -4,6 +4,26 @@ import numpy as np
 import matplotlib.pyplot as plt
 from ultralytics import YOLO
 
+
+#Logo image
+logo_path = "logo.jpg"
+st.markdown(
+    f"""
+    <style>
+        .header-logo {{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100px;
+            z-index: 100;
+        }}
+    </style>
+    <img src="{logo_path}" class="header-logo">
+    """,
+    unsafe_allow_html=True
+)
+
+
 #  YOLO
 model_cus = YOLO('best.pt')
 
@@ -25,7 +45,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.write("""# YOLO Model: Welding Defects Detection 👨‍🏭""")
+st.write("""# YOLO Model: AI Welding Defects Detection PRO 👨‍🏭""")
 
 
 uploaded_file = st.file_uploader("Select an image", type=["jpg", "jpeg", "png"])
