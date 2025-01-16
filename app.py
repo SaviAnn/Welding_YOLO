@@ -4,15 +4,19 @@ import numpy as np
 import matplotlib.pyplot as plt
 from ultralytics import YOLO
 
+#  YOLO
+model_cus = YOLO('best.pt')
+
 cola, colb = st.columns([1, 9])  
 logo = Image.open("logo.jpg")
 with cola:
+    st.write(" ")
+    st.write(" ")
     st.image(logo, width=50)  # 
 with colb:
     st.write("# YOLO Model: AI Welding Defects Detection PRO 👨‍🏭")  
 
-#  YOLO
-model_cus = YOLO('best.pt')
+
 
 st.markdown("""
 <style>
