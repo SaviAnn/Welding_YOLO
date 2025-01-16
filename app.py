@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from ultralytics import YOLO
 
 cola, colb = st.columns([1, 9])  
-
+logo = Image.open("logo.jpg")
 with cola:
     st.image(logo, use_column_width=True)  # 
 with colb:
