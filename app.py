@@ -23,7 +23,30 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+logo = Image.open("logo.jpg")
 
+# CSS for a position
+st.markdown(
+    """
+    <style>
+        .logo-container {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 100;
+        }
+        .logo-container img {
+            width: 100px; 
+        }
+    </style>
+    <div class="logo-container">
+        <img src="data:image/jpeg;base64,{image}" alt="Logo">
+    </div>
+    """.format(
+        image=st.file_uploader_to_base64(logo)
+    ),
+    unsafe_allow_html=True,
+)
 #  YOLO
 model_cus = YOLO('best.pt')
 
