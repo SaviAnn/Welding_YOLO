@@ -7,7 +7,7 @@ from ultralytics import YOLO
 cola, colb = st.columns([1, 9])  
 logo = Image.open("logo.jpg")
 with cola:
-    st.image(logo, column_width=50)  # 
+    st.image(logo, width=50)  # 
 with colb:
     st.write("# YOLO Model: AI Welding Defects Detection PRO 👨‍🏭")  
 
