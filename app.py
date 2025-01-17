@@ -11,7 +11,6 @@ cola, colb = st.columns([1, 9])
 logo = Image.open("logo.jpg")
 with cola:
     st.write(" ")
-    st.write(" ")
     st.image(logo, width=150)  # 
 with colb:
     st.write("# AI Defects Detection PRO")  
