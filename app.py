@@ -14,7 +14,7 @@ with cola:
     st.write(" ")
     st.image(logo, width=150)  # 
 with colb:
-    st.write("# AI Welding Defects Detection PRO 👨‍🏭")  
+    st.write("# AI Defects Detection PRO")  
 
 
 
