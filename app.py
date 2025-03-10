@@ -2,6 +2,7 @@ import streamlit as st
 from PIL import Image, ImageOps
 import numpy as np
 import matplotlib.pyplot as plt
+import cv2
 from ultralytics import YOLO
 
 #  YOLO
